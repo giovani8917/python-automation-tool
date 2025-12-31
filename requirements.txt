@@ -1,0 +1,6 @@
+pynput
+pyautogui
+keyboard
+psutil
+Pillow
+pystray
