@@ -1,10 +1,11 @@
-import socket
-import psutil
-from datetime import datetime
 import logging
-import time
+import socket
+from datetime import datetime
+
+import psutil
 
 logger = logging.getLogger("main.utils")
+
 
 def parse_fecha(fecha_str):
     """Parses a date string into a datetime object trying multiple formats."""
@@ -23,6 +24,7 @@ def parse_fecha(fecha_str):
             continue
     raise ValueError(f"Formato de fecha inválido: {fecha_str}")
 
+
 def check_internet_connection(host="8.8.8.8", port=53, timeout=2):
     """Devuelve True si hay conexión a internet"""
     try:
@@ -31,6 +33,7 @@ def check_internet_connection(host="8.8.8.8", port=53, timeout=2):
         return True
     except Exception:
         return False
+
 
 def check_battery_level(threshold=20):
     """Devuelve True si hay batería suficiente o está enchufado, False si está baja."""
@@ -41,13 +44,11 @@ def check_battery_level(threshold=20):
     # Si está enchufado o supera el umbral, OK
     return batt.power_plugged or batt.percent >= threshold
 
+
 def setup_logging(log_file="automatizacion.log"):
     """Configura el sistema de logging"""
     logging.basicConfig(
         level=logging.DEBUG,
         format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
-        handlers=[
-            logging.FileHandler(log_file, encoding="utf-8"),
-            logging.StreamHandler()
-        ]
+        handlers=[logging.FileHandler(log_file, encoding="utf-8"), logging.StreamHandler()],
     )

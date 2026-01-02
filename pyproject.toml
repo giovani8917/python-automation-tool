@@ -1,0 +1,22 @@
+[tool.ruff]
+# Longitud de línea moderna (black usa 88, pero 100 es muy común en pantallas actuales)
+line-length = 100
+
+# Versión de Python objetivo
+target-version = "py38"
+
+[tool.ruff.lint]
+# Reglas a activar:
+# E: pycodestyle errors
+# F: Pyflakes (detecta errores lógicos como variables no usadas)
+# I: isort (ordena imports)
+select = ["E", "F", "I"]
+
+# Ignorar reglas problemáticas si fuera necesario
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"

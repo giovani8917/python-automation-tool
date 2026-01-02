@@ -16,7 +16,29 @@
 
 *   Sigue [PEP 8](https://www.python.org/dev/peps/pep-0008/) para el código Python.
 *   Usa nombres de variables y funciones descriptivos en inglés o español (mantén la consistencia con el código existente).
+*   Usa nombres de variables y funciones descriptivos en inglés o español (mantén la consistencia con el código existente).
 
-## Licencia
+## Comandos de Desarrollo
+
+Para mantener la calidad del código, este proyecto utiliza herramientas modernas:
+
+### 1. Formato y Estilo (Linting)
+Antes de subir cambios, asegúrate de que tu código cumpla con las reglas de estilo:
+
+```bash
+# Correr chequeo de errores
+ruff check .
+
+# Correr formateo automático (arregla el código por ti)
+ruff format .
+```
+
+### 2. Pruebas (Testing)
+Asegúrate de no romper funcionalidades existentes corriendo los tests:
+
+```bash
+pytest
+```
+
 
 Al contribuir, aceptas que tu código sea distribuido bajo la misma licencia que este proyecto.

@@ -2,15 +2,20 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
-# Logs
-*.log
-
-# Virtual Environment
-venv/
+.venv/
 env/
-.env
+venv/
+ENV/
+
+# Project specific
+*.atp
+recent_projects.json
+automatizacion.log
 
 # IDEs
 .vscode/
 .idea/
+
+# OS
+.DS_Store
+Thumbs.db

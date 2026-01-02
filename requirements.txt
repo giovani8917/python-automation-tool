@@ -1,6 +1,8 @@
-pynput
-pyautogui
 keyboard
-psutil
-Pillow
+pyautogui
+pynput
+ruff
+pytest
 pystray
+Pillow
+psutil
